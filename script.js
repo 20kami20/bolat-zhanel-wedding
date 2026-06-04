@@ -39,7 +39,7 @@
         try {
 
             const response = await fetch(
-                "http://localhost:3000/send-rsvp",
+                "https://wedding-server-7bxs.onrender.com/send-rsvp",
                 {
                     method: "POST",
                     headers: {
