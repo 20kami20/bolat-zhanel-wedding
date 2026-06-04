@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolat & Zhanel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <audio autoplay loop muted id="bgMusic">
+        <source src="audio/wedding.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="hero">
+        <img src="images/main.jpg" alt="Главная" class="full-screen-img">
+    </div>
+
+    <div class="hero">
+        <img src="images/doves.jpg" alt="Приглашение" class="full-screen-img">
+    </div>
+
+    <section class="countdown-section">
+
+        <h2>До нашей свадьбы осталось</h2>
+
+        <div class="countdown">
+
+            <div class="time-box">
+                <span id="days">0</span>
+                <p>Дней</p>
+            </div>
+
+            <div class="time-box">
+                <span id="hours">0</span>
+                <p>Часов</p>
+            </div>
+
+            <div class="time-box">
+                <span id="minutes">0</span>
+                <p>Минут</p>
+            </div>
+
+            <div class="time-box">
+                <span id="seconds">0</span>
+                <p>Секунд</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="hero">
+        <img src="images/time.jpg" alt="Тайминг" class="full-screen-img">
+    </div>
+
+    <div class="hero place-block">
+
+        <img src="images/place.jpg" alt="Место" class="full-screen-img">
+
+        <a href="https://2gis.kz/astana/geo/70000001034489528" target="_blank" class="map-link"
+            aria-label="Открыть карту">
+        </a>
+
+    </div>
+
+    <div class="hero">
+        <img src="images/dresscode.jpg" alt="Дресс-код" class="full-screen-img">
+    </div>
+
+    <div class="hero">
+        <img src="images/questionnarie.jpg" alt="Анкета" class="full-screen-img">
+    </div>
+
+    <section class="rsvp">
+
+        <h2>Подтвердите, пожалуйста,<br>свое присутствие</h2>
+
+        <form id="rsvpForm">
+
+            <input type="text" id="guestName" placeholder="Имя Фамилия" required>
+
+            <div class="question">
+                Сможете ли Вы прийти?
+            </div>
+
+            <label>
+                <input type="radio" name="attendance" value="alone">
+                Да, я приду один (одна)
+            </label>
+
+            <label>
+                <input type="radio" name="attendance" value="couple">
+                Да, я приду с супругой (-ом)
+            </label>
+
+            <label>
+                <input type="radio" name="attendance" value="no">
+                Нет, я не смогу прийти
+            </label>
+
+            <button type="submit">
+                Отправить
+            </button>
+
+        </form>
+
+    </section>
+    <div class="hero">
+        <img src="images/thanks.jpg" alt="Спасибо" class="full-screen-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
