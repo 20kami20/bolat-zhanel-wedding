@@ -137,3 +137,32 @@ window.addEventListener("scroll", () => {
     }
 
 }, { passive: true });
+
+const petalsContainer = document.querySelector(".petals");
+
+function createPetal() {
+
+    const petal = document.createElement("div");
+
+    petal.classList.add("petal");
+
+    petal.innerHTML = "🌸";
+
+    petal.style.left =
+        Math.random() * window.innerWidth + "px";
+
+    petal.style.animationDuration =
+        (8 + Math.random() * 8) + "s";
+
+    petal.style.fontSize =
+        (18 + Math.random() * 20) + "px";
+
+    petalsContainer.appendChild(petal);
+
+    setTimeout(() => {
+        petal.remove();
+    }, 16000);
+
+}
+
+setInterval(createPetal, 700);
