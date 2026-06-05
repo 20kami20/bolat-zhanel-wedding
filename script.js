@@ -118,10 +118,22 @@ setInterval(() => {
 
 }, 1000);
 
-document.addEventListener("click", () => {
-    const music = document.getElementById("bgMusic");
+const music = document.getElementById("bgMusic");
 
-    music.muted = false;
-    music.play();
+let musicStarted = false;
 
-}, { once: true });
+window.addEventListener("scroll", () => {
+
+    if (!musicStarted) {
+
+        music.play()
+            .then(() => {
+                musicStarted = true;
+            })
+            .catch(error => {
+                console.log(error);
+            });
+
+    }
+
+}, { passive: true });
