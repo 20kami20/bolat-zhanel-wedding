@@ -215,58 +215,43 @@ body {
 
     position: absolute;
 
-    top: -60px;
+    top: -80px;
 
-    background: linear-gradient(
-        135deg,
-        rgba(255,255,255,0.95),
-        rgba(255,220,230,0.95)
-    );
-
-    border-radius:
-        60% 40%
-        70% 30%
-        / 50% 60%
-        40% 50%;
-
-    box-shadow:
-        0 0 8px rgba(255,220,230,0.4);
-
-    opacity: 0.85;
+    opacity: 0.8;
 
     animation:
-        falling linear forwards,
-        sway ease-in-out infinite;
+        petalFall linear forwards,
+        petalSwing ease-in-out infinite;
+
+    filter: blur(0.3px);
 }
 
-@keyframes falling {
+@keyframes petalFall {
 
-    0% {
+    from {
         transform:
-            translateY(-60px)
+            translateY(-100px)
             rotate(0deg);
     }
 
-    100% {
+    to {
         transform:
             translateY(120vh)
             rotate(720deg);
     }
-
 }
 
-@keyframes sway {
+@keyframes petalSwing {
 
     0% {
         margin-left: 0;
     }
 
     50% {
-        margin-left: 40px;
+        margin-left: 50px;
     }
 
     100% {
         margin-left: 0;
     }
-
 }
