@@ -119,24 +119,29 @@ setInterval(() => {
 }, 1000);
 
 const music = document.getElementById("bgMusic");
+const musicButton = document.getElementById("musicButton");
 
-let musicStarted = false;
+musicButton.addEventListener("click", () => {
 
-window.addEventListener("scroll", () => {
+    if (music.paused) {
 
-    if (!musicStarted) {
+        music.play();
 
-        music.play()
-            .then(() => {
-                musicStarted = true;
-            })
-            .catch(error => {
-                console.log(error);
-            });
+        musicButton.classList.add("playing");
+
+        musicButton.innerHTML = "♫";
+
+    } else {
+
+        music.pause();
+
+        musicButton.classList.remove("playing");
+
+        musicButton.innerHTML = "♪";
 
     }
 
-}, { passive: true });
+});
 
 const petalsContainer = document.querySelector(".petals");
 
