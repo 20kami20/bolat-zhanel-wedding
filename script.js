@@ -142,31 +142,26 @@ const petalsContainer = document.querySelector(".petals");
 
 function createPetal() {
 
-    const petal = document.createElement("div");
+    const petal = document.createElement("img");
 
-    petal.className = "petal";
+    petal.src = "images/petal.png";
+
+    petal.classList.add("petal");
 
     petal.style.left =
         Math.random() * window.innerWidth + "px";
 
     petal.style.width =
-        (12 + Math.random() * 18) + "px";
-
-    petal.style.height =
-        (16 + Math.random() * 22) + "px";
+        (15 + Math.random() * 20) + "px";
 
     petal.style.animationDuration =
-        (10 + Math.random() * 8) + "s";
-
-    petal.style.animationDelay =
-        Math.random() * 2 + "s";
+        (10 + Math.random() * 10) + "s";
 
     petalsContainer.appendChild(petal);
 
     setTimeout(() => {
         petal.remove();
-    }, 18000);
-
+    }, 20000);
 }
 
-setInterval(createPetal, 800);
+setInterval(createPetal, 1200);
