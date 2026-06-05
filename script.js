@@ -157,7 +157,7 @@ function createPetal() {
         Math.random() * window.innerWidth + "px";
 
     petal.style.width =
-        (25 + Math.random() * 35) + "px";
+        (30 + Math.random() * 35) + "px";
 
     petal.style.animationDuration =
         (10 + Math.random() * 10) + "s";
